@@ -7,7 +7,7 @@
   <meta name="description" content="Structured AI Agents for Reliable Visualization Report Generation">
   <style>
     :root{
-      --bg:#cce3e7; /* soft teal to match poster tone */
+      --bg:#cce3e7;
       --ink:#111;
       --muted:#444;
       --card:#ffffff;
@@ -23,7 +23,7 @@
     header{
       display:flex; gap:20px; align-items:center; padding:28px 0 12px;
     }
-    header img{width:84px; height:auto; image-rendering:-webkit-optimize-contrast}
+    header img{width:84px; height:auto}
     h1{font-size:clamp(28px,5vw,42px); margin:0;}
     .tagline{color:var(--muted); margin-top:4px}
     .card{
@@ -70,16 +70,17 @@
         <div class="btns">
           <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">📄 Paper (PDF)</a>
           <a class="button outline" href="assets/poster.pdf" target="_blank" rel="noopener">🖼 Poster (PDF)</a>
+          <a class="button outline" href="assets/report.pdf" target="_blank" rel="noopener">📊 Visualization Report (PDF)</a>
           <a class="button outline" href="https://github.com/nemozjh/VIS_Agent_nemo" target="_blank" rel="noopener">💻 Code (GitHub)</a>
         </div>
       </div>
       <div class="col-5">
-        <h2>Method at a Glance</h2>
+        <h2>Representative Results</h2>
         <div class="kvs">
-          <div class="kv"><strong>Sub-task Units</strong><br>Overview, Temporal Trends, Top Entities, Cross-Metric Relationships.</div>
-          <div class="kv"><strong>Structured Outputs</strong><br>Fixed-schema JSON with placeholders and executable Python.</div>
-          <div class="kv"><strong>Verified Numbers</strong><br>All metrics are computed, not free-form LLM text.</div>
-          <div class="kv"><strong>Fast</strong><br>Reports generated within seconds per request.</div>
+          <div class="kv"><strong>Dataset Overview</strong><br>3,877 papers (1990–2024) from 4 conferences.</div>
+          <div class="kv"><strong>Publication Trends</strong><br>Yearly and awarded-paper analyses reveal field growth and recognition patterns.</div>
+          <div class="kv"><strong>Top Entities</strong><br>Prolific authors and trending keywords extracted from VisPubData.</div>
+          <div class="kv"><strong>Cross-Metric Analysis</strong><br>Correlation between citations, downloads, and award distribution.</div>
         </div>
       </div>
     </section>
@@ -99,11 +100,9 @@
       <div class="btns">
         <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">Download Paper (PDF)</a>
         <a class="button outline" href="assets/poster.pdf" target="_blank" rel="noopener">Download Poster (PDF)</a>
+        <a class="button outline" href="assets/report.pdf" target="_blank" rel="noopener">Visualization Report (PDF)</a>
         <a class="button outline" href="https://github.com/nemozjh/VIS_Agent_nemo" target="_blank" rel="noopener">View Code on GitHub</a>
       </div>
-      <p style="margin-top:10px">
-        Visualization report: add your exported report file as <code class="inline">assets/report.pdf</code> and link it here once ready.
-      </p>
     </section>
 
     <footer>
