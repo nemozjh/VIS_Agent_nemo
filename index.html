@@ -1,18 +1,118 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Project Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIS Agent — Project Homepage</title>
+  <meta name="description" content="Structured AI Agents for Reliable Visualization Report Generation">
   <style>
-    body{font-family:system-ui,Arial,sans-serif;margin:40px;line-height:1.6}
-    .wrap{max-width:720px}
+    :root{
+      --bg:#cce3e7; /* soft teal to match poster tone */
+      --ink:#111;
+      --muted:#444;
+      --card:#ffffff;
+      --accent:#0f766e;
+      --accent-ink:#fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      line-height:1.55; color:var(--ink); background:var(--bg);
+    }
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{
+      display:flex; gap:20px; align-items:center; padding:28px 0 12px;
+    }
+    header img{width:84px; height:auto; image-rendering:-webkit-optimize-contrast}
+    h1{font-size:clamp(28px,5vw,42px); margin:0;}
+    .tagline{color:var(--muted); margin-top:4px}
+    .card{
+      background:var(--card); border-radius:14px; padding:22px; box-shadow:0 10px 30px rgba(0,0,0,.06);
+      margin:16px 0;
+    }
+    h2{margin:0 0 10px; font-size:22px}
+    .btns{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px}
+    a.button{
+      display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none;
+      background:var(--accent); color:var(--accent-ink); font-weight:600;
+    }
+    a.button.outline{background:transparent; color:var(--accent); border:2px solid var(--accent)}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+    .col-7{grid-column:span 7}
+    .col-5{grid-column:span 5}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.col-7,.col-5{grid-column:1 / -1} header{flex-direction:column; align-items:flex-start}}
+    .kvs{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:8px}
+    .kv{background:#f7fbfc; border:1px solid #e2f0f2; border-radius:12px; padding:12px}
+    footer{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:20px 0 40px; color:var(--muted)}
+    .qr{width:110px}
+    code.inline{background:#f1f5f9; padding:2px 6px; border-radius:6px}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Coming Soon</h1>
-    <p>This page reserves the link for our IEEE VIS workshop mini-challenge project.</p>
+    <header>
+      <img src="assets/logo.png" alt="Project robot logo">
+      <div>
+        <h1>Structured AI Agents for Reliable Visualization Reports</h1>
+        <div class="tagline">Deterministic computation • Structured JSON outputs • Verifiable charts</div>
+      </div>
+    </header>
+
+    <section class="card grid">
+      <div class="col-7">
+        <h2>Project Overview</h2>
+        <p>
+          We present <strong>Structured AI Agents</strong>, a modular pipeline for visualization report generation. 
+          The task is decomposed into sub-task units that yield standardized <code class="inline">JSON</code> with executable code. 
+          During execution, quantitative results are deterministically computed and chart rendering is reproducible, 
+          reducing hallucinations and improving reliability in the final report.
+        </p>
+        <div class="btns">
+          <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">📄 Paper (PDF)</a>
+          <a class="button outline" href="assets/poster.pdf" target="_blank" rel="noopener">🖼 Poster (PDF)</a>
+          <a class="button outline" href="https://github.com/nemozjh/VIS_Agent_nemo" target="_blank" rel="noopener">💻 Code (GitHub)</a>
+        </div>
+      </div>
+      <div class="col-5">
+        <h2>Method at a Glance</h2>
+        <div class="kvs">
+          <div class="kv"><strong>Sub-task Units</strong><br>Overview, Temporal Trends, Top Entities, Cross-Metric Relationships.</div>
+          <div class="kv"><strong>Structured Outputs</strong><br>Fixed-schema JSON with placeholders and executable Python.</div>
+          <div class="kv"><strong>Verified Numbers</strong><br>All metrics are computed, not free-form LLM text.</div>
+          <div class="kv"><strong>Fast</strong><br>Reports generated within seconds per request.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Abstract</h2>
+      <p>
+        This work addresses instability and hallucination in AI-agent-based data visualization by introducing a structured pipeline. 
+        Each sub-task unit produces standardized JSON that embeds executable and deterministic code. 
+        The design enforces correctness in quantitative computation, reduces hallucinations, and yields reliable visualizations. 
+        Verified descriptions and generated charts are then composed into a coherent, reproducible report.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Resources</h2>
+      <div class="btns">
+        <a class="button" href="assets/paper.pdf" target="_blank" rel="noopener">Download Paper (PDF)</a>
+        <a class="button outline" href="assets/poster.pdf" target="_blank" rel="noopener">Download Poster (PDF)</a>
+        <a class="button outline" href="https://github.com/nemozjh/VIS_Agent_nemo" target="_blank" rel="noopener">View Code on GitHub</a>
+      </div>
+      <p style="margin-top:10px">
+        Visualization report: add your exported report file as <code class="inline">assets/report.pdf</code> and link it here once ready.
+      </p>
+    </section>
+
+    <footer>
+      <div>
+        Contact: <a href="mailto:nemozjh@hotmail.com">nemozjh@hotmail.com</a><br>
+        Project URL: <a href="https://nemozjh.github.io/VIS_Agent_nemo/">nemozjh.github.io/VIS_Agent_nemo/</a>
+      </div>
+      <img class="qr" src="assets/qr.png" alt="QR to project homepage">
+    </footer>
   </div>
 </body>
 </html>
